@@ -7,7 +7,7 @@ module output_register
   );
 
 
-always @(reset or posedge clk)
+always @(posedge clk)
   if (reset)
     data_out <= 64'b0;
   else
