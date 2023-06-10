@@ -16,7 +16,7 @@ always @(posedge clk)
     if (load == 1'b1)
       data <= data_in;
 
-always @(posedge clk)
-  assign plaintext <= data;
+always @(data)
+  plaintext <= data;
 
 endmodule
