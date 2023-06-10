@@ -11,7 +11,7 @@ reg [63:0] data;
 
 always @(posedge clk)
   if (reset)
-    plaintext <= 64'b0;
+    data <= 64'b0;
   else
     if (load == 1'b1)
       data <= data_in;
