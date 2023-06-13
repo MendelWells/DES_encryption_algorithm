@@ -73,7 +73,7 @@ feistel_network i_feistel_network( //TODO !!! real names to be given
 .ciphertext(ciphertext)
 );
 
-output_tegister i_output_tegister (.clk(clk), .reset(rst), .ciphertext(ciphertext), .data_out(data_out));
+output_register i_output_tegister (.clk(clk), .reset(rst), .ciphertext(ciphertext), .data_out(data_out));
 
 endmodule
 
