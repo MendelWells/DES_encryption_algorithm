@@ -4,7 +4,7 @@ module input_register
     input  wire        reset,
     input  wire [63:0] data_in,
     input  wire        load,
-    output reg  [63:0] plaintext
+    output reg  [63:0] data_out
   );
 
 reg [63:0] data;
@@ -17,6 +17,6 @@ always @(posedge clk)
       data <= data_in;
 
 always @(data)
-  plaintext <= data;
+  data_out <= data;
 
 endmodule
