@@ -1,9 +1,9 @@
 
 module PC1
 (
- input [64:1] key,
- output [28:1] cbits,
- output [28:1] dbits
+ input [64:0] key,
+ output [28:0] cbits,
+ output [28:0] dbits
 );
 
 assign cbits[1]  = key[57];
