@@ -1,7 +1,7 @@
 module E
 (
- input [1:32] data_in,
- output [1:48] data_out
+ input [32:1] data_in,
+ output [48:1] data_out
 );
 
 assign data_out[1]  = data_in[32];
