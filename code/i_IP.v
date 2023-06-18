@@ -1,7 +1,7 @@
 module i_IP
 (
- input [0:63] data_in,
- output [0:63] data_out
+ input [63:0] data_in,
+ output [63:0] data_out
 );
 
 assign data_out[0] = data_in[39];
