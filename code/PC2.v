@@ -1,7 +1,7 @@
 module PC2
 (
-  input      [56:1] data_in,
-  output     [48:1] data_out
+  input      [56:0] data_in,
+  output     [48:0] data_out
 );
 
 assign data_out[1] =  data_in[14];
