@@ -1,6 +1,6 @@
 //reset, clk
 
-`timescale 1n/1n
+`timescale 1ns/1ns
 `default_nettype none 
 module tb_7_top();
 
@@ -21,9 +21,9 @@ always begin				//10MHz
 end
 
 initial begin
-	#100 reset = 0; load = 1;
-	#100 load = 0;
-	#100 load = 1;
+	#100 tb_reset = 0; tb_load = 1;
+	#100 tb_load = 0;
+	#100 tb_load = 1;
 end
 
 initial begin
@@ -55,9 +55,8 @@ initial
 begin
   while ( ! $feof(data_file_in)) 
   begin
-    @ (posedge clk);
+    @ (posedge tb_clk);
 	statusD = $fscanf(data_file_in,"%h %h %h\n" , key_test, plaintext_test, ciphertext_test);
-	repeat (1) @ (posedge clk);
 	if (ciphertext_test == tb_data_out)
 		comper = "PASS";
 	else
