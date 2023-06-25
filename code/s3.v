@@ -6,6 +6,12 @@ output reg [3:0] s3_out
 
 always @ (*)
     case(s3_in)
+            6'b000000 : s3_out = 4'd10;
+            6'b000001 : s3_out = 4'd13;
+            6'b000010 : s3_out = 4'd0;
+            6'b000011 : s3_out = 4'd7;
+            6'b000100 : s3_out = 4'd9;
+            6'b000101 : s3_out = 4'd0;
             6'b000110 : s3_out = 4'd14;
             6'b000111 : s3_out = 4'd9;
             6'b001000 : s3_out = 4'd6;
