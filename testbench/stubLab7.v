@@ -24,13 +24,13 @@ always @(posedge clk or posedge reset)
 always @(posedge clk or posedge reset)
 	if (reset)
 		data_out <= 64'b0;
-	else if (load_d) begin
-		if (!$feof(data_file_in))
+	else if (load_d)
+		if ( ! $feof(data_file_in))
 			$fscanf(data_file_in,"%h\n", data_out);
-		end
 		else begin
 				 $fclose(data_file_in);
 				 $finish("stub_file is finished");
 		end 
+
 endmodule
 
