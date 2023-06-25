@@ -1,5 +1,3 @@
-
-
 module lab_7_top (
 input	   	  clk,
 input	 	  rst,
@@ -12,64 +10,64 @@ output [63:0] data_out
 wire [63:0] plaintext;
 wire [63:0] ciphertext;
 wire [63:0] key_samp;
-wire [47:0] key_1;
-wire [47:0] key_2;
-wire [47:0] key_3;
-wire [47:0] key_4;
-wire [47:0] key_5;
-wire [47:0] key_6;
-wire [47:0] key_7;
-wire [47:0] key_8;
-wire [47:0] key_9;
-wire [47:0] key_10;
-wire [47:0] key_11;
-wire [47:0] key_12;
-wire [47:0] key_13;
-wire [47:0] key_14;
-wire [47:0] key_15;
-wire [47:0] key_16;
+wire [47:0] K1;
+wire [47:0] K2;
+wire [47:0] K3;
+wire [47:0] K4;
+wire [47:0] K5;
+wire [47:0] K6;
+wire [47:0] K7;
+wire [47:0] K8;
+wire [47:0] K9;
+wire [47:0] K10;
+wire [47:0] K11;
+wire [47:0] K12;
+wire [47:0] K13;
+wire [47:0] K14;
+wire [47:0] K15;
+wire [47:0] K16;
 
 input_register i_data_samp(.clk(clk), .reset(rst), .data_in(data_in), .load(load), .data_out(plaintext));
 input_register i_key_samp(.clk(clk), .reset(rst), .data_in(key_in), .load(load), .data_out(key_samp));
 
 key_schedule i_key_schedule( //TODO !!! real names to be given
 .key_in(key_samp),
-.key_1(key_1),
-.key_2(key_2),
-.key_3(key_3),
-.key_4(key_4),
-.key_5(key_5),
-.key_6(key_6),
-.key_7(key_7),
-.key_8(key_8),
-.key_9(key_9),
-.key_10(key_10),
-.key_11(key_11),
-.key_12(key_12),
-.key_13(key_13),
-.key_14(key_14),
-.key_15(key_15),
-.key_16(key_16)
+.K1(K1),
+.K2(K2),
+.K3(K3),
+.K4(K4),
+.K5(K5),
+.K6(K6),
+.K7(K7),
+.K8(K8),
+.K9(K9),
+.K10(K10),
+.K11(K11),
+.K12(K12),
+.K13(K13),
+.K14(K14),
+.K15(K15),
+.K16(K16)
 );
 
 feistel_network i_feistel_network( //TODO !!! real names to be given
 .plaintext(plaintext),
-.key_1(key_1),
-.key_2(key_2),
-.key_3(key_3),
-.key_4(key_4),
-.key_5(key_5),
-.key_6(key_6),
-.key_7(key_7),
-.key_8(key_8),
-.key_9(key_9),
-.key_10(key_10),
-.key_11(key_11),
-.key_12(key_12),
-.key_13(key_13),
-.key_14(key_14),
-.key_15(key_15),
-.key_16(key_16),
+.K1(K1),
+.K2(K2),
+.K3(K3),
+.K4(K4),
+.K5(K5),
+.K6(K6),
+.K7(K7),
+.K8(K8),
+.K9(K9),
+.K10(K10),
+.K11(K11),
+.K12(K12),
+.K13(K13),
+.K14(K14),
+.K15(K15),
+.K16(K16),
 .ciphertext(ciphertext)
 );
 

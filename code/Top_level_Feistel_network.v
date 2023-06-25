@@ -1,4 +1,4 @@
-module Feistel_network 
+module feistel_network 
   (
     input  wire [63:0] plaintext,
     
