@@ -1,7 +1,7 @@
 module P
 (
- input [31:0] data_in,
- output [31:0] data_out
+ input [0:31] data_in,
+ output [0:31] data_out
 );
 
 assign data_out[0]  = data_in[15];
