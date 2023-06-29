@@ -22,42 +22,6 @@ module feistel_network
     output wire [63:0] ciphertext
   );
 
-    function [31:0] bitwise_plus(input [31:0] a, b);
-      begin
-        bitwise_plus[0] = a[0] + b[0];
-        bitwise_plus[1] = a[1] + b[1];
-        bitwise_plus[2] = a[2] + b[2];
-        bitwise_plus[3] = a[3] + b[3];
-        bitwise_plus[4] = a[4] + b[4];
-        bitwise_plus[5] = a[5] + b[5];
-        bitwise_plus[6] = a[6] + b[6];
-        bitwise_plus[7] = a[7] + b[7];
-        bitwise_plus[8] = a[8] + b[8];
-        bitwise_plus[9] = a[9] + b[9];
-        bitwise_plus[10] = a[10] + b[10];
-        bitwise_plus[11] = a[11] + b[11];
-        bitwise_plus[12] = a[12] + b[12];
-        bitwise_plus[13] = a[13] + b[13];
-        bitwise_plus[14] = a[14] + b[14];
-        bitwise_plus[15] = a[15] + b[15];
-        bitwise_plus[16] = a[16] + b[16];
-        bitwise_plus[17] = a[17] + b[17];
-        bitwise_plus[18] = a[18] + b[18];
-        bitwise_plus[19] = a[19] + b[19];
-        bitwise_plus[20] = a[20] + b[20];
-        bitwise_plus[21] = a[21] + b[21];
-        bitwise_plus[22] = a[22] + b[22];
-        bitwise_plus[23] = a[23] + b[23];
-        bitwise_plus[24] = a[24] + b[24];
-        bitwise_plus[25] = a[25] + b[25];
-        bitwise_plus[26] = a[26] + b[26];
-        bitwise_plus[27] = a[27] + b[27];
-        bitwise_plus[28] = a[28] + b[28];
-        bitwise_plus[29] = a[29] + b[29];
-        bitwise_plus[30] = a[30] + b[30];
-        bitwise_plus[31] = a[31] + b[31];
-      end
-    endfunction
 
 
     wire [31:0] L0;  wire [31:0] R0;
@@ -121,23 +85,23 @@ module feistel_network
 
 
     always @(*) 
-	begin
-        R1 = bitwise_plus(L0, f1_out); L1 = R0;
-        R2 = bitwise_plus(L1, f2_out); L2 = R1;
-        R3 = bitwise_plus(L2, f3_out); L3 = R2;
-        R4 = bitwise_plus(L3, f4_out); L4 = R3;
-        R5 = bitwise_plus(L4, f5_out); L5 = R4;
-        R6 = bitwise_plus(L5, f6_out); L6 = R5;
-        R7 = bitwise_plus(L6, f7_out); L7 = R6;
-        R8 = bitwise_plus(L7, f8_out); L8 = R7;
-        R9 = bitwise_plus(L8, f9_out); L9 = R8;
-        R10 = bitwise_plus(L9, f10_out); L10 = R9;
-        R11 = bitwise_plus(L10, f11_out); L11 = R10;
-        R12 = bitwise_plus(L11, f12_out); L12 = R11;
-        R13 = bitwise_plus(L12, f13_out); L13 = R12;
-        R14 = bitwise_plus(L13, f14_out); L14 = R13;
-        R15 = bitwise_plus(L14, f15_out); L15 = R14;
-        R16 = bitwise_plus(L15, f16_out); L16 = R15;
+    begin
+        R1 = L0^f1_out; L1 = R0;
+        R2 = L1^f2_out; L2 = R1;
+        R3 = L2^f3_out; L3 = R2;
+        R4 = L3^f4_out; L4 = R3;
+        R5 = L4^f5_out; L5 = R4;
+        R6 = L5^f6_out; L6 = R5;
+        R7 = L6^f7_out; L7 = R6;
+        R8 = L7^f8_out; L8 = R7;
+        R9 = L8^f9_out; L9 = R8;
+        R10 = L9^f10_out; L10 = R9;
+        R11 = L10^f11_out; L11 = R10;
+        R12 = L11^f12_out; L12 = R11;
+        R13 = L12^f13_out; L13 = R12;
+        R14 = L13^f14_out; L14 = R13;
+        R15 = L14^f15_out; L15 = R14;
+        R16 = L15^f16_out; L16 = R15;
     end
 
     i_IP Inverse_Initial_Permutation (.data_in({R16, L16}), .data_out(ciphertext));
