@@ -1,6 +1,6 @@
 module lab_7_top (
 input	   	  clk,
-input	 	  rst,
+input	 	  reset,
 input  [63:0] key_in,
 input  [63:0] data_in,
 input	 	  load,
@@ -27,8 +27,8 @@ wire [47:0] K14;
 wire [47:0] K15;
 wire [47:0] K16;
 
-input_register i_data_samp(.clk(clk), .reset(rst), .data_in(data_in), .load(load), .data_out(plaintext));
-input_register i_key_samp(.clk(clk), .reset(rst), .data_in(key_in), .load(load), .data_out(key_samp));
+input_register i_data_samp(.clk(clk), .reset(reset), .data_in(data_in), .load(load), .data_out(plaintext));
+input_register i_key_samp(.clk(clk), .reset(reset), .data_in(key_in), .load(load), .data_out(key_samp));
 
 key_schedule i_key_schedule( //TODO !!! real names to be given
 .key_in(key_samp),
@@ -71,7 +71,7 @@ feistel_network i_feistel_network( //TODO !!! real names to be given
 .ciphertext(ciphertext)
 );
 
-output_register i_output_tegister (.clk(clk), .reset(rst), .ciphertext(ciphertext), .data_out(data_out));
+output_register i_output_tegister (.clk(clk), .reset(reset), .ciphertext(ciphertext), .data_out(data_out));
 
 endmodule
 
