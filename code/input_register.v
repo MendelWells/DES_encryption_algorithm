@@ -7,16 +7,13 @@ module input_register
     output reg  [63:0] data_out
   );
 
-reg [63:0] data;
 
 always @(posedge clk)
   if (reset)
-    data <= 64'b0;
+    data_out<= 64'b0;
   else
     if (load == 1'b1)
-      data <= data_in;
+      data_out<= data_in;
 
-always @(data)
-  data_out <= data;
 
 endmodule

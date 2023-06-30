@@ -1,9 +1,9 @@
 
 module PC1
 (
- input [63:0] key,
- output [27:0] cbits,
- output [27:0] dbits
+ input [0:63] key,
+ output [0:27] cbits,
+ output [0:27] dbits
 );
 
 assign cbits[0]  = key[56];
@@ -34,6 +34,8 @@ assign cbits[24] = key[59];
 assign cbits[25] = key[51];
 assign cbits[26] = key[43];
 assign cbits[27] = key[35];
+
+
 assign dbits[0]  = key[62];
 assign dbits[1]  = key[54];
 assign dbits[2]  = key[46];
@@ -50,19 +52,17 @@ assign dbits[12] = key[29];
 assign dbits[13] = key[21];
 assign dbits[14] = key[13];
 assign dbits[15] = key[5];
-assign dbits[16] = key[27];
-assign dbits[17] = key[19];
-assign dbits[18] = key[11];
-assign dbits[19] = key[3];
-assign dbits[20] = key[26];
-assign dbits[21] = key[18];
-assign dbits[22] = key[10];
-assign dbits[23] = key[2];
+assign dbits[16] = key[60];
+assign dbits[17] = key[52];
+assign dbits[18] = key[44];
+assign dbits[19] = key[36];
+assign dbits[20] = key[28];
+assign dbits[21] = key[20];
+assign dbits[22] = key[12];
+assign dbits[23] = key[4];
 assign dbits[24] = key[27];
 assign dbits[25] = key[19];
 assign dbits[26] = key[11];
 assign dbits[27] = key[3];
-
-
 
 endmodule
