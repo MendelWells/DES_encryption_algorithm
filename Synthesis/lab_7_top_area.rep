@@ -6,9 +6,9 @@
 //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 //  
-//  Running on Windows 10 givon@ELEC-403-106  10.0.19041 x64
+//  Running on Windows 10 givon@ELEC-403-117  10.0.19041 x64
 //  
-//  Start time Sun Jul 02 15:24:48 2023
+//  Start time Thu Jul 06 12:00:21 2023
 
 ***************************************************************
 Device Utilization for 7A15TCSG324
@@ -17,8 +17,8 @@ Resource                          Used    Avail   Utilization
 ---------------------------------------------------------------
 IOs                               195     210      92.86%
 Global Buffers                    1       32        3.13%
-LUTs                              1298    10400    12.48%
-CLB Slices                        123     8150      1.51%
+LUTs                              1463    10400    14.07%
+CLB Slices                        288     8150      3.53%
 Dffs or Latches                   128     20800     0.62%
 Block RAMs                        0       25        0.00%
 DSP48E1s                          0       45        0.00%
@@ -38,8 +38,8 @@ Library: work    Cell: lab_7_top    View: INTERFACE
  OBUF                xca7    64 x
  VCC                 xca7     1 x
  input_register_0    work     1 x     64     64 Dffs or Latches
-                                    1136   1136 LUTs
- input_register_1    work     1 x    162    162 LUTs
+                                    1299   1299 LUTs
+ input_register_1    work     1 x    164    164 LUTs
 
  Number of ports :                          195
  Number of nets :                           886
@@ -48,9 +48,9 @@ Library: work    Cell: lab_7_top    View: INTERFACE
 
 Total accumulated area : 
  Number of Dffs or Latches :                128
- Number of LUTs :                          1298
+ Number of LUTs :                          1463
  Number of Primitive LUTs :                1567
- Number of LUTs with LUTNM/HLUTNM :         538
+ Number of LUTs with LUTNM/HLUTNM :         208
  Number of accumulated instances :         1883
 
 
