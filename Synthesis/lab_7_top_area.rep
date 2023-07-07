@@ -1,14 +1,14 @@
-//  Precision RTL Plus 64-bit 2021.1.0.4 (Production Release) Tue Jul 20 01:22:31 PDT 2021
+//  Precision RTL Synthesis 64-bit 2018.1.0.19 (Production Release) Fri Aug 10 05:55:53 PDT 2018
 //  
-//  Copyright (c) Mentor Graphics Corporation, 1996-2021, All Rights Reserved.
+//  Copyright (c) Mentor Graphics Corporation, 1996-2018, All Rights Reserved.
 //             Portions copyright 1991-2008 Compuware Corporation
 //                       UNPUBLISHED, LICENSED SOFTWARE.
 //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 //  
-//  Running on Windows 10 givon@ELEC-403-117  10.0.19041 x64
+//  Running on Windows Server 2016 glass@MSTS-ELEC  10.0.17763 x64
 //  
-//  Start time Thu Jul 06 12:00:21 2023
+//  Start time Thu Jul 06 23:30:27 2023
 
 ***************************************************************
 Device Utilization for 7A15TCSG324
@@ -17,9 +17,9 @@ Resource                          Used    Avail   Utilization
 ---------------------------------------------------------------
 IOs                               195     210      92.86%
 Global Buffers                    1       32        3.13%
-LUTs                              1463    10400    14.07%
-CLB Slices                        288     8150      3.53%
-Dffs or Latches                   128     20800     0.62%
+LUTs                              1567    10400    15.07%
+CLB Slices                        281     8150      3.45%
+Dffs or Latches                   184     20800     0.88%
 Block RAMs                        0       25        0.00%
 DSP48E1s                          0       45        0.00%
 ---------------------------------------------------------------
@@ -37,21 +37,21 @@ Library: work    Cell: lab_7_top    View: INTERFACE
  IBUF                xca7   122 x
  OBUF                xca7    64 x
  VCC                 xca7     1 x
- input_register_0    work     1 x     64     64 Dffs or Latches
-                                    1299   1299 LUTs
+ input_register_0    work     1 x   1403   1403 LUTs
+                                      64     64 Dffs or Latches
  input_register_1    work     1 x    164    164 LUTs
+                                      56     56 Dffs or Latches
 
  Number of ports :                          195
- Number of nets :                           886
+ Number of nets :                           946
  Number of instances :                      254
  Number of references to this view :          0
 
 Total accumulated area : 
- Number of Dffs or Latches :                128
- Number of LUTs :                          1463
- Number of Primitive LUTs :                1567
- Number of LUTs with LUTNM/HLUTNM :         208
- Number of accumulated instances :         1883
+ Number of Dffs or Latches :                184
+ Number of LUTs :                          1567
+ Number of LUTs with LUTNM/HLUTNM :         222
+ Number of accumulated instances :         1939
 
 
 *****************************
